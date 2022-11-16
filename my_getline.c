@@ -10,7 +10,7 @@ char *my_getline()
 	char *cmd = NULL;
 	size_t n;
 
-	printf("kevin&henry@alxsh:/$ ");
+	write(1, "kevin&henry@alxsh:/$ ", 23);
 	if (getline(&cmd, &n, stdin) == -1)
 	{
 	exit(0);

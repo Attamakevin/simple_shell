@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-
+int _strcmp(char *s1, char *s2);
 extern char **environ;
 int cd(char **argv);
 int help(char **argv);
@@ -16,5 +16,5 @@ char *my_getline();
 char **tokenizer(char *cmd);
 void exec(char **argv);
 void file_stat(char *cmd, char **argv);
-
+int _strlen(char *c);
 #endif

@@ -22,7 +22,7 @@ void file_stat(char *cmd, char **argv)
 	while (env_cpy[i])
 	{
 		token = strtok(env_cpy[i++], "=");
-		if (strcmp(key, token) == 0)
+		if (_strcmp(key, token) == 0)
 			break;
 	}
 	token = strtok(NULL, "\0");
@@ -31,7 +31,7 @@ void file_stat(char *cmd, char **argv)
 	while (token)
 	{
 	path = malloc(sizeof(char) * (strlen(token) + strlen(cmd) + 1));
-		strcat(path, token), strcat(path, "/"), strcat(path, cmd);
+		_strcat(path, token), _strcat(path, "/"), _strcat(path, cmd);
 		if (stat(path, &st) == 0)
 		{
 			argv[0] = strdup(path);

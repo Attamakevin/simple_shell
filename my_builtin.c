@@ -57,7 +57,7 @@ int my_exit(char **argv)
 	int i;
 for (i = 0; i < builtin_num; i++)
 	{
-	if (strcmp(argv[0], builtin_array[2]) == 0)
+	if (_strcmp(argv[0], builtin_array[2]) == 0)
 		{
 		return (builtin_func[1] (&argv[0]));
 		}
