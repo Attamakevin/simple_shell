@@ -10,9 +10,9 @@
 int main(void)
 
 {
-	char **argv = NULL;
+	/*char **argv = NULL;*/
 
 	my_getline();
-	my_exit(argv);
+	/*my_exit(argv);*/
 return (0);
 }

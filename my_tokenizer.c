@@ -15,8 +15,8 @@ char **tokenizer(char *cmd)
 	int argc = 0, i = 0;
 	struct stat st;
 
-	cmdcpy = malloc(sizeof(char) * strlen(cmd));
-	strcpy(cmdcpy, cmd);
+	cmdcpy = malloc(sizeof(char) * _strlen(cmd));
+	_strcpy(cmdcpy, cmd);
 	token = strtok(cmd, " \n");
 	/* get number of arguments ==> argc */
 	while (token)
@@ -26,8 +26,8 @@ char **tokenizer(char *cmd)
 	token = strtok(cmdcpy, " \n");
 	while (token)
 	{
-		argv[i] = malloc(sizeof(char) * strlen(token));
-		strcpy(argv[i++], token);
+		argv[i] = malloc(sizeof(char) * _strlen(token));
+		_strcpy(argv[i++], token);
 		token = strtok(NULL, " \n");
 	}
 	argv[i] = NULL;
